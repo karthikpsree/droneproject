@@ -1,4 +1,3 @@
-import pygame
 import argparse
 import time
 from pathlib import Path
@@ -147,10 +146,7 @@ def detect(save_img=False):
                 for c in det[:, -1].unique():
                     n = (det[:, -1] == c).sum()  # detections per class
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
-                    if (n>0):
-                        pygame.mixer.init()
-                        pygame.mixer.music.load('beep_beep.wav')  # Provide the path to your alert sound file
-                        pygame.mixer.music.play()
+
                 dets_to_sort = np.empty((0,6))
                 # NOTE: We send in detected object class too
                 for x1,y1,x2,y2,conf,detclass in det.cpu().detach().numpy():
