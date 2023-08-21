@@ -1,6 +1,6 @@
 # drone detection using YOLOv7
 
-following is documnetation of official version
+following is documnetation of official version and not particularly for drone detetcion
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
